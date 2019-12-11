@@ -38,8 +38,8 @@ import com.ragnax.sso.entidad.Usuario;
 import com.ragnax.sso.exception.LogicaImplException;
 import com.ragnax.sso.repository.FactorySeguridadDAO;
 import com.ragnax.sso.servicio.clientes.ZapalaClienteRest;
-import com.ragnax.sso.servicio.clientes.ZapalaRequest;
-import com.ragnax.sso.servicio.utilidades.UtilidadesSSO;
+import com.ragnax.sso.servicio.clientes.modelo.ZapalaRequest;
+import com.ragnax.sso.servicio.utilidades.SSOUtilidades;
 
 
 @Service
@@ -1108,7 +1108,7 @@ public class SSOServiceImpl implements SSOService {
 			buscarPerfilxUsername(objUsuario.getIdPerfil());
 
 			String codigoViaje = zapalaClienteRest.generarCodigoByNumero(new ZapalaRequest(
-					UtilidadesSSO.crearListaCadenaCodigoUsuario(objUsuario))).getCodigoGenerado();  
+					SSOUtilidades.crearListaCadenaCodigoUsuario(objUsuario))).getCodigoGenerado();  
 
 			/**Buscar si el codigo existe*/
 			Pageable pageByNombreDesc = PageRequest.of(0, 1, Sort.by("codigoUsuarioUnit").descending());

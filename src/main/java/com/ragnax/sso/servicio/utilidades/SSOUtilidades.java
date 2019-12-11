@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.ragnax.sso.entidad.Usuario;
 
-public class UtilidadesSSO {
+public class SSOUtilidades {
 	
 	public static List<String> crearListaCadenaCodigoUsuario(Usuario objUsuario){
 		

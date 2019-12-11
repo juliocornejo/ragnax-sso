@@ -1,4 +1,4 @@
-package com.ragnax.sso.servicio.clientes;
+package com.ragnax.sso.servicio.clientes.modelo;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

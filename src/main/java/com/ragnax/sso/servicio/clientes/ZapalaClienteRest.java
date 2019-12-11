@@ -3,6 +3,9 @@ package com.ragnax.sso.servicio.clientes;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.ragnax.sso.servicio.clientes.modelo.Zapala;
+import com.ragnax.sso.servicio.clientes.modelo.ZapalaRequest;
+
 
 @FeignClient(name = "ragnax-zapala" , url = "localhost:8081")
 public interface ZapalaClienteRest {
